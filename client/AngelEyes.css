@@ -1,0 +1,27 @@
+#map-canvas { 
+	width: calc(100vw - 250px);
+	height: calc(100vh - 0px);
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.sidebar{
+	float: left;
+	width: 250px;
+	height: 100vh;
+	background-color: #0099dd;
+	background-size: cover;
+	background-position:left;
+}
+
+.sidebar h3{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 300;
+   	text-align: center;
+  	color: white;
+}
+
+body{
+	margin: 0px !important;
+}

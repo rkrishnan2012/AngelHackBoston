@@ -1,0 +1,20 @@
+<head>
+  <title>AngelEyes</title>
+   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHu_rbvc8QwcZze4pCS3AuJASFEbefBk8"></script>
+</head>
+
+<body>
+ {{> mapsPage}}
+</body>
+
+<template name="mainLayout">
+  {{> mapsPage}}
+</template>
+
+<template name="mapsPage">
+	<div class="sidebar">
+		<h3 class="name"></h3>
+    <p class="description"></p>
+	</div>
+<div id="map-canvas"></div>
+</template>
