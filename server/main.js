@@ -11,7 +11,7 @@ Meteor.methods({
         return fut.wait();
     },
     callFriend: function(number, text){
-        HTTP.call("POST", "http://52.10.249.140/api/call", {
+        /*HTTP.call("POST", "http://52.10.249.140/api/call", {
             data: {
                 "message": text,
                 "recipients": [number.toString()],
@@ -27,7 +27,7 @@ Meteor.methods({
                     console.log(Meteor.http.call("GET", "http://52.10.249.140/api/call/" + result.data.id).data.documents[0]);
                 }).run();
             }
-        });
+        });*/
     }
 })
 
