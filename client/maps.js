@@ -26,7 +26,7 @@ Template.mapsPage.events = {
         $('#helpSomeoneModal').modal('show');
     },
     'click .btnCall': function(){
-        Meteor.call("callFriend", $(".modal-body input").val());
+        Meteor.call("callFriend", $(".modal-body input").val(), "Hello this is an automated alert from angel hack. We are nearing capacity, the doors will be opening at 9am. This is on a first come first serve basis.");
         $(".modal-body input").val("");
         $('#helpSomeoneModal').modal('hide');
     },
@@ -121,6 +121,9 @@ Template.mapsPage.onRendered(function() {
     google.maps.event.addListener(marker, 'click', function(eve) {
         Session.set("twitterReady", true);
         Session.set("angelHack", true);
+        $(".county").text("");
+        $(".date").text("");
+        $(".area").text("Made with <3 @ Angel Hack");
         $(".name").text("Angel Hack Boston!")
     });
 
@@ -293,13 +296,14 @@ function startChat(item) {
                                 var message = e.message.message;
                                 console.log("Message!:" + message);
                             });
-                            $("#remoteVideo").hide();
+                            //$("#remoteVideo").hide();
                             console.log("Member found!");
 
                             client.listen("call", function() {
                                 $("#localVideo").hide("slow", function() {
-                                    $("#remoteVideo").show("slow");
+                                    
                                 });
+                                $("#remoteVideo").show("slow");
                             })
 
 
@@ -387,10 +391,10 @@ function startChat(item) {
     client.listen("call", function(e) {
         var call = e.call;
         console.log(call);
-        console.log("GOT A CALL!!!!");
+        console.log("Got a call.");
     });
 
-    console.log("COnnecting to respoke.");
+    console.log("Connecting to respoke.");
     // Execute some signin event, then connect to Respoke with
     client.connect({
         endpointId: endpointId

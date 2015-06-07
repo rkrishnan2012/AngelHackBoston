@@ -10,10 +10,10 @@ Meteor.methods({
         })
         return fut.wait();
     },
-    callFriend: function(number){
+    callFriend: function(number, text){
         HTTP.call("POST", "http://52.10.249.140/api/call", {
             data: {
-                "message": 'Hello World!',
+                "message": text,
                 "recipients": [number.toString()],
                 "dateToSendOn": "06/06/2015 12:00:00 EST",
                 "AccountID": "123456"

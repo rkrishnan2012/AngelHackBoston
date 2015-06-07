@@ -1,5 +1,5 @@
 #map-canvas { 
-	width: calc(100vw - 250px);
+	width: calc(100vw - 270px);
 	height: calc(100vh - 0px);
 	position: absolute;
 	top: 0;
@@ -8,11 +8,13 @@
 
 .sidebar{
 	float: left;
-	width: 235px;
+	width: 270px;
 	height: 100vh;
 	background-color: #333;
 	background-size: cover;
 	background-position:left;
+	position: absolute;
+	z-index: 20;
 }
 
 .sidebar h3{
@@ -77,14 +79,14 @@ body{
   position: absolute;
   bottom: -185px;
   left: -1px;
-  width: 236px;
+  width: 270px;
 }
 
 .volcanoStuff{
   position: absolute;
   bottom: -185px;
   left: -1px;
-  width: 236px;
+  width: 270px;
 }
 
 .twitter-timeline{
