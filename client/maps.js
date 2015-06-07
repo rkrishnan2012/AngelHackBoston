@@ -121,6 +121,10 @@ Template.mapsPage.onRendered(function() {
     google.maps.event.addListener(marker, 'click', function(eve) {
         Session.set("twitterReady", true);
         Session.set("angelHack", true);
+        lastMarker = marker;
+        Session.set("item", {
+            country: "Angel Hack"
+        });
         $(".county").text("");
         $(".date").text("");
         $(".area").text("Made with <3 @ Angel Hack");
