@@ -97,7 +97,7 @@ Meteor.startup(function() {
 
     
 
-
+/*
     Events.remove({
 
 	});
@@ -137,7 +137,7 @@ Meteor.startup(function() {
         });
     });
 
-    fun();
+    fun();*/
 });
 
 function getMoreDetailsCustom(url, name) {

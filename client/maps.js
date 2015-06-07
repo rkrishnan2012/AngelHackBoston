@@ -28,6 +28,7 @@ Template.mapsPage.events = {
     'click .btnCall': function(){
         Meteor.call("callFriend", $(".modal-body input").val());
         $(".modal-body input").val("");
+        $('#helpSomeoneModal').modal('hide');
     },
     'click .liveStream': function(){
         startChat(Session.get("item"));
