@@ -8,9 +8,9 @@
 
 .sidebar{
 	float: left;
-	width: 250px;
+	width: 235px;
 	height: 100vh;
-	background-color: #0099dd;
+	background-color: #333;
 	background-size: cover;
 	background-position:left;
 }
@@ -22,6 +22,118 @@
   	color: white;
 }
 
+.sidebar h5{
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight: 300;
+   	text-align: center;
+  	color: white;
+}
+
+.gm-style-iw {
+   width: 350px !important;
+   top: 15px !important;
+   left: 0 !important;
+   background-color: white;
+   box-shadow: 0 2px 3px rgba(178, 178, 178, 0.6);
+   border: 1px solid rgba(0, 0, 0, 0.6);
+   border-radius: 2px 2px 10px 10px; 
+   background-size:cover;
+}
+
+ .iw-bottom-gradient {
+  position: absolute;
+  width: 326px;
+  height: 25px;
+  bottom: 10px;
+  right: 16px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
+
+
+h2{
+	position: relative !important;
+  height: 0px !important;
+  margin: 0px !important;
+  text-align: center !important;
+  color: white !important;
+}
+video{
+	width: 350px;
+}
+
+
 body{
 	margin: 0px !important;
+}
+
+.endCall{
+	margin-left: 137px;
+}
+
+.angelHackStuff{
+  position: absolute;
+  bottom: -185px;
+  left: -1px;
+  width: 236px;
+}
+
+.volcanoStuff{
+  position: absolute;
+  bottom: -185px;
+  left: -1px;
+  width: 236px;
+}
+
+.twitter-timeline{
+	display: none;
+}
+
+.choose{
+	margin-top: 50vh;
+}
+
+.buttons{
+	margin-left: auto;
+	margin-right: auto;
+
+	text-align: center;
+}
+
+.donateMoney{
+	margin-top: 10px;
+}
+
+.buttons .btn{
+	background-color:#40636E;
+	border: none;
+}
+
+.modal-body{
+	font-size: 13pt;
+	height: auto;
+}
+
+.modal-header{
+	border: none !important;
+}
+
+.modal-title{
+	text-align: center;
+	font-size: 17pt;
+}
+
+.modal-footer{
+	border: none !important;
+}
+
+.modal-content{
+	background-color: #333 !important;
+	color: white;
+}
+
+.modal-content input{
+	color: black;
 }

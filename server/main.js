@@ -4,11 +4,30 @@ Meteor.methods({
     findVideos: function(description) {
         Future = Npm.require('fibers/future');
         var fut = new Future();
-        search_youtube(description, function(err, result){
+        search_youtube(description, function(err, result) {
             console.log(result);
             fut['return'](result);
         })
         return fut.wait();
+    },
+    callFriend: function(number){
+        HTTP.call("POST", "http://52.10.249.140/api/call", {
+            data: {
+                "message": 'Hello World!',
+                "recipients": [number.toString()],
+                "dateToSendOn": "06/06/2015 12:00:00 EST",
+                "AccountID": "123456"
+            }
+        },
+        function(error, result) {
+            if (!error) {
+                console.log(result.data.id);
+                Fiber = Npm.require('fibers');
+                Fiber(function() {
+                    console.log(Meteor.http.call("GET", "http://52.10.249.140/api/call/" + result.data.id).data.documents[0]);
+                }).run();
+            }
+        });
     }
 })
 
@@ -75,6 +94,10 @@ Meteor.publish('Events', function publishFunction() {
 });
 
 Meteor.startup(function() {
+
+    
+
+
     /*Events.remove({
 
 	});
@@ -87,7 +110,7 @@ Meteor.startup(function() {
         Fiber = Npm.require('fibers');
 
         fiber = Fiber.current;
-
+        
         request('http://hisz.rsoe.hu/alertmap/index2.php', function(error, response, html) {
             if (!error && response.statusCode == 200) {
                 ch = cheerio.load(html);
